@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Thank you!</title>
+    </head>
+    <body>
+
+        <h1>Thank you! You have been signed up to the event!</h1>
+        <p>See the information you gave us below.</p>
+        <ul>
+            <li>Name: <span th:text="${param.name[0]}"> Name </span></li>
+            <li>Email: <span th:text="${param.email[0]}"> Email </span></li>
+            <li>Phone: <span th:text="${param.phone[0]}"> Phone </span></li>
+            <li>Address: <span th:text="${param.address[0]}"> Address </span></li>
+        </ul>
+        
+    </body>
+</html>
