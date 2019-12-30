@@ -1,0 +1,40 @@
+.main-nav {
+    list-style: none;
+    margin: 0;
+    padding: .5em 0 1em;
+    display: flex;
+    border-bottom: 1px solid #ddd;
+}
+.main-nav > li {
+    max-width: 100px;
+}
+.main-nav a {
+    text-decoration: none;
+    display: inline-block;
+    outline:none;
+    padding-right: 1em;
+}
+.btn {
+    margin:0.5em 0;
+}
+.edit-form {
+    display:none;
+}
+
+.edit-form.active {
+    display:block;
+}
+
+.attendee-list__item {
+    border-bottom: 1px solid #eee;
+    padding: 1em 0;
+    margin: .5em 0;
+}
+
+.attendee-list__item:first-child {
+    border-top:1px solid #eee;
+}
+
+.attendee-list__item.hidden {
+    display:none;
+}

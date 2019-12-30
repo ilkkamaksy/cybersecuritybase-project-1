@@ -7,12 +7,18 @@
 
         <h1>Thank you! You have been signed up to the event!</h1>
         <p>See the information you gave us below.</p>
-        <ul>
-            <li>Name: <span th:text="${param.name[0]}"> Name </span></li>
-            <li>Email: <span th:text="${param.email[0]}"> Email </span></li>
-            <li>Phone: <span th:text="${param.phone[0]}"> Phone </span></li>
-            <li>Address: <span th:text="${param.address[0]}"> Address </span></li>
-        </ul>
+        <div id="signup_details"></div>
+        <p>You can <a href="/login">login here</a> to view and edit your information</p>
         
+    <script th:inline="javascript">
+    /*<![CDATA[*/
+        var el = "<ul><li>" + /*[[${param.name[0]}]]*/ + "</li>"
+        el += "<li>" + /*[[${param.username[0]}]]*/ + "</li>";
+        el += "<li>" + /*[[${param.email[0]}]]*/ + "</li>";
+        el += "<li>" + /*[[${param.phone[0]}]]*/ + "</li>";
+        el += "<li>" + /*[[${param.address[0]}]]*/ + "</li></ul>";
+        document.getElementById('signup_details').innerHTML = el; 
+    /*]]>*/
+    </script>
     </body>
 </html>

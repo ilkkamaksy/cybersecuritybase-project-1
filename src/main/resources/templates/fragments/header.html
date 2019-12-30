@@ -1,0 +1,21 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Header template</title>
+    </head>
+    <body>
+
+        <header th:fragment="header">
+            <ul class="main-nav">
+                <li><a th:href="@{/form}">Signup</a></li>
+                <li sec:authorize="isAuthenticated()">
+                    <a th:href="@{/app-admin}">Admin</a>
+                </li>
+                <li sec:authorize="isAuthenticated()">
+                    <a th:href="@{/logout}">Logout</a>
+                </li>
+            </ul>
+        </header>
+
+    </body>
+</html>
