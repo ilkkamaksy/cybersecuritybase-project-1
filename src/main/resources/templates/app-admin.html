@@ -12,9 +12,9 @@
         
         <h1>Manage event guests</h1>
         <div><p>You are logged in as: <span sec:authentication="name"></span></p></div>
-        
+       
         <div class="attendee-list">
-            <div th:each="signup : ${signups}" class="attendee-list__item" th:classappend="${signup.account.username} == ${#authentication.getPrincipal().getUsername()} ? visible : hidden">
+            <div th:each="signup : ${signups}" class="attendee-list__item" th:classappend="${signup.account.username} == ${#authentication.getPrincipal().getUsername()} or ${#authorization.expression('hasRole(''ROLE_ADMIN'')')} ? visible : hidden">
                 <div class="list-item-container">
                     <div class="list-item-content__section list-item-content__section--start">
                         <div>Name: <span th:text="${signup.name}">Name</span></div>
